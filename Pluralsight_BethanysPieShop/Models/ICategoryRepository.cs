@@ -5,13 +5,8 @@ using System.Threading.Tasks;
 
 namespace Pluralsight_BethanysPieShop.Models
 {
-    public interface IPieRepository
+    public interface ICategoryRepository
     {
-        IEnumerable<Pie> Pies { get; }
-
-        IEnumerable<Pie> PiesOfTheWeek { get; }
-
-        Pie GetPieById(int pieId);
-
+        IEnumerable<Category> Categories { get; }
     }
 }
