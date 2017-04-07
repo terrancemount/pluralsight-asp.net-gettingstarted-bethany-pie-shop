@@ -31,8 +31,6 @@ namespace Pluralsight_BethanysPieShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-
-           
         }
     }
 }
