@@ -37,7 +37,8 @@ namespace Pluralsight_BethanysPieShop
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IPieRepository, PieRepository>();
 
-
+            services.AddMemoryCache();
+            services.AddSession();
             services.AddMvc();
 
 
@@ -53,6 +54,7 @@ namespace Pluralsight_BethanysPieShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+            app.UseSession();
 
             DbInitializer.Seed(app);
         }

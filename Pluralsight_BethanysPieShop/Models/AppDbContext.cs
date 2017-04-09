@@ -14,8 +14,15 @@ namespace Pluralsight_BethanysPieShop.Models
         }
 
         //connnection properties between the database and the models
+
+        //connect to the Categories table
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Pie> Pies { get; set; }
+        //connect to the Pies table  -- has foriegn key to the categories
+        public DbSet<Pie> Pies { get; set; }  
+
+        //connect to the Shopping Cart Item table
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
     }
 }
